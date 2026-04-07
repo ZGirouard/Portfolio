@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
-import { colors } from '../styles/colors.styles'
 
 const MAX_PX = 593
 
