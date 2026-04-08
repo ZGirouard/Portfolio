@@ -12,13 +12,16 @@ export default function Heading({
   weight = 'regular',
   italic = false,
   surface = 'light',
+  as: AsComponent,
+  css: userCss,
   children,
   ...rest
 }) {
-  const Tag = tags[level] ?? 'h1'
+  const Tag = AsComponent ?? tags[level] ?? 'h1'
+  const baseCss = headingStyle({ level, weight, italic, surface })
   return (
     <Tag
-      css={headingStyle({ level, weight, italic, surface })}
+      css={userCss != null ? [baseCss, userCss] : baseCss}
       {...rest}
     >
       {children}

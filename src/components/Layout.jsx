@@ -1,5 +1,6 @@
 import { Outlet, NavLink } from 'react-router-dom'
 import styled from '@emotion/styled'
+import Footer from './Footer'
 
 const Shell = styled.div`
   min-height: 100vh;
@@ -63,6 +64,7 @@ export default function Layout() {
       <Main>
         <Outlet />
       </Main>
+      <Footer />
     </Shell>
   )
 }

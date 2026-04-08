@@ -63,7 +63,7 @@ export default function Home() {
       <Heading level={1} surface="light" weight="bold" style={{ marginBottom: '2rem' }}>
         MY WORK
       </Heading>
-      <WorkList>
+      <WorkList id="work">
         <WorkItem>
           <WorkItemMedia>
             <Heading level={2} surface="light" weight="bold" italic>
