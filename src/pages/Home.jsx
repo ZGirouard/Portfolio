@@ -10,6 +10,20 @@ const Divider = styled.img`
   margin: 1.5rem auto;
 `
 
+const HeroSection = styled.section`
+  max-width: 1134px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+`
+
+const HeroImage = styled.img`
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+`
+
 const WorkList = styled.div`
   max-width: 1134px;
   margin: 0 auto;
@@ -53,12 +67,16 @@ const WorkItemText = styled.div`
 export default function Home() {
   return (
     <div>
-      <Heading level={1} surface="light" weight="bold">
-        I BUILD THINGS THAT
-      </Heading>
-      <Heading level={1} surface="dark" weight="bold">
-        FEEL GOOD &amp; LOOK GOOD.
-      </Heading>
+      <HeroSection>
+        <HeroImage
+          src="/Hero.png"
+          alt="I build things that feel good and look good — Zach Girouard."
+          width={1281}
+          height={511}
+          loading="eager"
+          decoding="async"
+        />
+      </HeroSection>
       <Divider src="/DIVIDER.svg" alt="" width={1134} height={67} />
       <Heading level={1} surface="light" weight="bold" style={{ marginBottom: '2rem' }}>
         MY WORK
