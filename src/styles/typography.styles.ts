@@ -1,21 +1,14 @@
 import { css, type SerializedStyles } from '@emotion/react'
 import { colors, type TypeSurface } from './colors.styles'
 
-export const headingSizePx = {
-  1: 64,
-  2: 48,
-  3: 40,
-  4: 36,
-} as const
+export type HeadingLevel = 1 | 2 | 3 | 4
 
-const headingFluidFontSize = {
+const headingFluidFontSize: Record<HeadingLevel, string> = {
   1: 'clamp(1.875rem, 1.25rem + 2.5vw, 4rem)',
   2: 'clamp(1.5rem, 1rem + 2vw, 3rem)',
   3: 'clamp(1.3125rem, 0.9rem + 1.6vw, 2.5rem)',
   4: 'clamp(1.25rem, 0.85rem + 1.4vw, 2.25rem)',
-} as const satisfies Record<keyof typeof headingSizePx, string>
-
-export type HeadingLevel = keyof typeof headingSizePx
+}
 
 export const fontWeight = {
   light: 300,

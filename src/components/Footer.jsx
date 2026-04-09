@@ -1,16 +1,15 @@
 import { NavLink } from 'react-router-dom'
 import Heading from './Heading'
-import { footerNavLinkCss } from '../styles/footerNavLink.styles'
+import { footerNavLinkCss } from '../styles/shared.styles'
 import { InstagramIcon, LinkedInIcon } from './FooterSocialIcons'
 import {
   BrandColumn,
   BrandMark,
-  ContactColumn,
   ContactLine,
   ContactValueLink,
+  FooterColumn,
   FooterRoot,
   Inner,
-  LinksColumn,
   SocialLink,
   SocialRow,
 } from './Footer.styles'
@@ -22,7 +21,7 @@ export default function Footer() {
   return (
     <FooterRoot>
       <Inner>
-        <LinksColumn>
+        <FooterColumn>
           <Heading level={3} surface="dark" weight="bold">
             LINKS
           </Heading>
@@ -57,8 +56,8 @@ export default function Footer() {
           >
             CONTACT
           </Heading>
-        </LinksColumn>
-        <ContactColumn>
+        </FooterColumn>
+        <FooterColumn>
           <Heading level={3} surface="dark" weight="bold">
             CONTACT
           </Heading>
@@ -92,7 +91,7 @@ export default function Footer() {
               <LinkedInIcon />
             </SocialLink>
           </SocialRow>
-        </ContactColumn>
+        </FooterColumn>
         <BrandColumn>
           <BrandMark
             src="/ZachGirouard.svg"

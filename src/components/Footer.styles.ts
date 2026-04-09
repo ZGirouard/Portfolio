@@ -1,8 +1,11 @@
 import styled from '@emotion/styled'
 import { colors } from '../styles/colors.styles'
+import {
+  centeredMaxWidthCss,
+  darkSurfaceInteractiveCss,
+} from '../styles/shared.styles'
 
 export const FooterRoot = styled.footer`
-  width: 100%;
   box-sizing: border-box;
   background-color: ${colors.black};
   border-top: 4px solid ${colors.darkRed};
@@ -10,9 +13,7 @@ export const FooterRoot = styled.footer`
 `
 
 export const Inner = styled.div`
-  box-sizing: border-box;
-  max-width: 1134px;
-  margin: 0 auto;
+  ${centeredMaxWidthCss}
   padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 1.5rem)
     clamp(2.5rem, 6vw, 5rem);
   display: grid;
@@ -31,14 +32,7 @@ const Column = styled.div`
   color: ${colors.white};
 `
 
-export const LinksColumn = styled(Column)`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
-`
-
-export const ContactColumn = styled(Column)`
+export const FooterColumn = styled(Column)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -57,20 +51,11 @@ export const ContactLine = styled.p`
 export const ContactValueLink = styled.a`
   color: inherit;
   text-decoration: none;
-
-  &:hover {
-    opacity: 0.88;
-  }
-
-  &:focus-visible {
-    outline: 2px solid ${colors.white};
-    outline-offset: 2px;
-  }
+  ${darkSurfaceInteractiveCss}
 `
 
 export const SocialRow = styled.div`
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
@@ -85,15 +70,7 @@ export const SocialLink = styled.a`
   height: 2rem;
   color: ${colors.white};
   text-decoration: none;
-
-  &:hover {
-    opacity: 0.88;
-  }
-
-  &:focus-visible {
-    outline: 2px solid ${colors.white};
-    outline-offset: 2px;
-  }
+  ${darkSurfaceInteractiveCss}
 
   svg {
     width: 100%;
@@ -105,7 +82,6 @@ export const BrandColumn = styled(Column)`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  justify-content: flex-start;
 
   @media (max-width: 768px) {
     align-items: flex-start;

@@ -1,5 +1,9 @@
 import styled from '@emotion/styled'
 import { colors } from '../styles/colors.styles'
+import {
+  centeredMaxWidthCss,
+  pageHorizontalGutterCss,
+} from '../styles/shared.styles'
 
 export const Bar = styled.header`
   height: 150px;
@@ -10,11 +14,9 @@ export const Bar = styled.header`
 `
 
 export const Inner = styled.div`
-  box-sizing: border-box;
+  ${centeredMaxWidthCss}
+  ${pageHorizontalGutterCss}
   height: 100%;
-  max-width: 1134px;
-  margin: 0 auto;
-  padding: 0 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;

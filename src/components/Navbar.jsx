@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import Heading from './Heading'
-import { footerNavLinkCss } from '../styles/footerNavLink.styles'
+import { footerNavLinkCss } from '../styles/shared.styles'
 import { Bar, Inner, Logo, NavLinks } from './Navbar.styles'
 
 export default function Navbar() {

@@ -1,18 +1,20 @@
 import styled from '@emotion/styled'
+import {
+  centeredMaxWidthCss,
+  pageHorizontalGutterCss,
+} from '../styles/shared.styles'
 
 export const Divider = styled.img`
   display: block;
   width: 100%;
-  max-width: 1134px;
+  ${centeredMaxWidthCss}
   height: auto;
-  margin: 1.5rem auto;
+  margin-block: 1.5rem;
 `
 
 export const HeroSection = styled.section`
-  max-width: 1134px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  box-sizing: border-box;
+  ${centeredMaxWidthCss}
+  ${pageHorizontalGutterCss}
 `
 
 export const HeroImage = styled.img`
@@ -23,15 +25,12 @@ export const HeroImage = styled.img`
 `
 
 export const WorkList = styled.div`
-  max-width: 1134px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  box-sizing: border-box;
+  ${centeredMaxWidthCss}
+  ${pageHorizontalGutterCss}
 `
 
 export const WorkItem = styled.div`
   display: flex;
-  flex-direction: row;
   align-items: center;
   gap: 1.25rem 2rem;
   margin-bottom: 2rem;

@@ -33,5 +33,4 @@ export const Img = styled.img`
   aspect-ratio: 1 / 1;
   object-fit: cover;
   height: auto;
-  vertical-align: top;
 `
