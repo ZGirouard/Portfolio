@@ -1,8 +1,33 @@
+import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import {
   centeredMaxWidthCss,
   pageHorizontalGutterCss,
 } from '../styles/shared.styles'
+
+const motionSafe = '@media (prefers-reduced-motion: no-preference)'
+
+const slideInFromLeft = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(-3rem, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+`
+
+const slideInFromRight = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(3rem, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+`
 
 export const Divider = styled.img`
   display: block;
@@ -10,11 +35,19 @@ export const Divider = styled.img`
   ${centeredMaxWidthCss}
   height: auto;
   margin-block: 1.5rem;
+
+  ${motionSafe} {
+    animation: ${slideInFromRight} 1.25s ease-in-out both;
+  }
 `
 
 export const HeroSection = styled.section`
   ${centeredMaxWidthCss}
   ${pageHorizontalGutterCss}
+
+  ${motionSafe} {
+    animation: ${slideInFromLeft} 1.25s ease-in-out both;
+  }
 `
 
 export const HeroImage = styled.img`
