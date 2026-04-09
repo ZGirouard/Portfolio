@@ -4,7 +4,6 @@ import {
   centeredMaxWidthCss,
   pageHorizontalGutterCss,
 } from '../styles/shared.styles'
-import { colors } from '../styles/colors.styles'
 
 const motionSafe = '@media (prefers-reduced-motion: no-preference)'
 

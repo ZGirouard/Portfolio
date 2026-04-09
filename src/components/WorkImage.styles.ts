@@ -1,9 +1,10 @@
 import styled from '@emotion/styled'
+import { Link } from 'react-router-dom'
 import { css } from '@emotion/react'
 
 const MAX_PX = 500
 
-const frameCss = css`
+const workImageFrameCss = css`
   display: block;
   width: 100%;
   max-width: ${MAX_PX}px;
@@ -12,19 +13,12 @@ const frameCss = css`
   padding: 0;
   margin: 0;
   background: none;
+  text-decoration: none;
+  color: inherit;
 `
 
-export const StyledLink = styled.a`
-  ${frameCss}
-`
-
-export const StyledButton = styled.button`
-  ${frameCss}
-`
-
-export const StyledFrame = styled.div`
-  ${frameCss}
-  cursor: default;
+export const WorkImageLink = styled(Link)`
+  ${workImageFrameCss}
 `
 
 export const Img = styled.img`

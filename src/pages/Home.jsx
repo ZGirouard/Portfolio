@@ -36,10 +36,7 @@ export default function Home() {
             <Heading level={2} surface="light" weight="bold" italic>
               AVITURE
             </Heading>
-            <WorkImage
-              src="/Aviture.svg"
-              alt="Aviture logo"
-            />
+            <WorkImage to="/work" src="/Aviture.svg" alt="Aviture logo" />
           </WorkItemMedia>
           <WorkItemText>
             <Heading level={1} surface="light" weight="light" italic>
@@ -52,10 +49,7 @@ export default function Home() {
             <Heading level={2} surface="light" weight="bold" italic>
               KIEWIT
             </Heading>
-            <WorkImage
-              src="/Kiewit.svg"
-              alt="Kiewit company logo"
-            />
+            <WorkImage to="/work" src="/Kiewit.svg" alt="Kiewit company logo" />
           </WorkItemMedia>
           <WorkItemText>
             <Heading level={1} surface="light" weight="light" italic>
@@ -68,10 +62,7 @@ export default function Home() {
             <Heading level={2} surface="light" weight="bold" italic>
               UNL
             </Heading>
-            <WorkImage
-              src="/UNL.svg"
-              alt="University of Nebraska–Lincoln logo"
-            />
+            <WorkImage to="/work" src="/UNL.svg" alt="University of Nebraska–Lincoln logo" />
           </WorkItemMedia>
           <WorkItemText>
             <Heading level={1} surface="light" weight="light" italic>

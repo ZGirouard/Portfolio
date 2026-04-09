@@ -1,47 +1,25 @@
-import { Img, StyledButton, StyledFrame, StyledLink } from './WorkImage.styles'
+import { Img, WorkImageLink } from './WorkImage.styles'
 
 export default function WorkImage({
+  to,
   src,
   alt,
-  href,
-  onClick,
   className,
   width,
   height,
   loading = 'lazy',
   decoding = 'async',
 }) {
-  const image = (
-    <Img
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      loading={loading}
-      decoding={decoding}
-    />
+  return (
+    <WorkImageLink to={to} className={className}>
+      <Img
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        loading={loading}
+        decoding={decoding}
+      />
+    </WorkImageLink>
   )
-
-  if (href != null && href !== '') {
-    return (
-      <StyledLink href={href} className={className} onClick={onClick}>
-        {image}
-      </StyledLink>
-    )
-  }
-
-  if (onClick != null) {
-    return (
-      <StyledButton
-        type="button"
-        className={className}
-        onClick={onClick}
-        aria-label={alt ? undefined : 'Open work'}
-      >
-        {image}
-      </StyledButton>
-    )
-  }
-
-  return <StyledFrame className={className}>{image}</StyledFrame>
 }
