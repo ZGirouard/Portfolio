@@ -8,7 +8,6 @@ export const headingSizePx = {
   4: 36,
 } as const
 
-/** Fluid caps match headingSizePx max; min sizes keep long lines inside narrow viewports. */
 const headingFluidFontSize = {
   1: 'clamp(1.875rem, 1.25rem + 2.5vw, 4rem)',
   2: 'clamp(1.5rem, 1rem + 2vw, 3rem)',

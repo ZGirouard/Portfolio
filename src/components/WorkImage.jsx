@@ -36,20 +36,6 @@ const Img = styled.img`
   vertical-align: top;
 `
 
-/**
- * Clickable square work tile: responsive up to 593px, 16px radius, 4px black border.
- * Pass `href` for a link; pass `onClick` (without `href`) for a button; omit both for a static frame.
- *
- * @param {object} props
- * @param {string} props.src
- * @param {string} props.alt
- * @param {string} [props.href]
- * @param {(e: import('react').MouseEvent) => void} [props.onClick]
- * @param {string} [props.className]
- * @param {number} [props.width] — intrinsic width for CLS (e.g. 593)
- * @param {number} [props.height] — intrinsic height for CLS (e.g. 593)
- * @param {'lazy'|'eager'} [props.loading]
- */
 export default function WorkImage({
   src,
   alt,

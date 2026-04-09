@@ -1,7 +1,6 @@
 import { css } from '@emotion/react'
 import { colors } from './colors.styles'
 
-/** Dark-surface nav links (footer LINKS column, main navbar). */
 export const footerNavLinkCss = css`
   text-decoration: none;
   display: inline-block;

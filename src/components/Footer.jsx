@@ -122,7 +122,6 @@ const BrandMark = styled.img`
   height: auto;
 `
 
-/** Replace with your public profile URLs */
 const INSTAGRAM_URL = 'https://www.instagram.com/'
 const LINKEDIN_URL = 'https://www.linkedin.com/in/'
 
@@ -148,10 +147,6 @@ function LinkedInIcon() {
   )
 }
 
-/**
- * Full-width footer: black background, dark red top border, three columns.
- * Height follows content; padding and gaps scale with the viewport.
- */
 export default function Footer() {
   return (
     <FooterRoot>
