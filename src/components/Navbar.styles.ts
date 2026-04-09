@@ -7,10 +7,8 @@ import {
 
 export const Bar = styled.header`
   height: 150px;
-  box-sizing: border-box;
   background-color: ${colors.black};
   border-bottom: 4px solid ${colors.red};
-  flex-shrink: 0;
 `
 
 export const Inner = styled.div`
@@ -26,13 +24,17 @@ export const Inner = styled.div`
 export const NavLinks = styled.nav`
   display: flex;
   align-items: center;
+  flex-direction: row;
   flex-wrap: wrap;
-  gap: 1rem 3.5rem;
+  gap: 1rem 4rem;
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+    gap: 1rem 2rem;
+  }
 `
 
 export const Logo = styled.img`
   display: block;
-  width: 89px;
-  height: 96px;
   flex-shrink: 0;
 `
