@@ -8,6 +8,14 @@ export const headingSizePx = {
   4: 36,
 } as const
 
+/** Fluid caps match headingSizePx max; min sizes keep long lines inside narrow viewports. */
+const headingFluidFontSize = {
+  1: 'clamp(1.875rem, 1.25rem + 2.5vw, 4rem)',
+  2: 'clamp(1.5rem, 1rem + 2vw, 3rem)',
+  3: 'clamp(1.3125rem, 0.9rem + 1.6vw, 2.5rem)',
+  4: 'clamp(1.25rem, 0.85rem + 1.4vw, 2.25rem)',
+} as const satisfies Record<keyof typeof headingSizePx, string>
+
 export type HeadingLevel = keyof typeof headingSizePx
 
 export const fontWeight = {
@@ -34,14 +42,14 @@ export function headingStyle(options: {
     italic = false,
     surface = 'light',
   } = options
-  const sizePx = headingSizePx[level]
   return css`
     font-family: var(--heading);
-    font-size: ${sizePx}px;
+    font-size: ${headingFluidFontSize[level]};
     font-weight: ${fontWeight[weight]};
     font-style: ${italic ? 'italic' : 'normal'};
     color: ${headingColor(surface)};
-    line-height: 1;
+    line-height: 1.05;
     margin: 0;
+    max-width: 100%;
   `
 }

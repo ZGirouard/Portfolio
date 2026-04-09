@@ -1,38 +1,31 @@
 import styled from '@emotion/styled'
-import { css } from '@emotion/react'
 import { NavLink } from 'react-router-dom'
 import Heading from './Heading'
 import { colors } from '../styles/colors.styles'
-
-const FOOTER_HEIGHT_PX = 763
+import { footerNavLinkCss } from '../styles/footerNavLink.styles'
 
 const FooterRoot = styled.footer`
   width: 100%;
   box-sizing: border-box;
-  height: ${FOOTER_HEIGHT_PX}px;
   background-color: ${colors.black};
   border-top: 4px solid ${colors.darkRed};
   flex-shrink: 0;
-
-  @media (max-width: 768px) {
-    height: auto;
-    min-height: ${FOOTER_HEIGHT_PX}px;
-  }
 `
 
 const Inner = styled.div`
   box-sizing: border-box;
-  height: 100%;
   max-width: 1134px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 1.5rem)
+    clamp(2.5rem, 6vw, 5rem);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem 2rem;
+  gap: clamp(2rem, 4vw, 3rem) clamp(1.25rem, 3vw, 2rem);
   align-content: start;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    gap: clamp(1.75rem, 5vw, 2.5rem);
   }
 `
 
@@ -129,20 +122,6 @@ const BrandMark = styled.img`
   height: auto;
 `
 
-const FooterNavLinkCss = css`
-  text-decoration: none;
-  display: inline-block;
-
-  &:hover {
-    opacity: 0.88;
-  }
-
-  &:focus-visible {
-    outline: 2px solid ${colors.white};
-    outline-offset: 2px;
-  }
-`
-
 /** Replace with your public profile URLs */
 const INSTAGRAM_URL = 'https://www.instagram.com/'
 const LINKEDIN_URL = 'https://www.linkedin.com/in/'
@@ -171,7 +150,7 @@ function LinkedInIcon() {
 
 /**
  * Full-width footer: black background, dark red top border, three columns.
- * Add content inside each column as needed.
+ * Height follows content; padding and gaps scale with the viewport.
  */
 export default function Footer() {
   return (
@@ -188,7 +167,7 @@ export default function Footer() {
             level={4}
             surface="dark"
             weight="light"
-            css={FooterNavLinkCss}
+            css={footerNavLinkCss}
           >
             HOME
           </Heading>
@@ -198,7 +177,7 @@ export default function Footer() {
             level={4}
             surface="dark"
             weight="light"
-            css={FooterNavLinkCss}
+            css={footerNavLinkCss}
           >
             WORK
           </Heading>
@@ -208,7 +187,7 @@ export default function Footer() {
             level={4}
             surface="dark"
             weight="light"
-            css={FooterNavLinkCss}
+            css={footerNavLinkCss}
           >
             CONTACT
           </Heading>

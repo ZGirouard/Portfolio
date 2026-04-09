@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import styled from '@emotion/styled'
 import Heading from '../components/Heading'
 import WorkImage from '../components/WorkImage'
@@ -62,9 +64,22 @@ const WorkItemMedia = styled.div`
 const WorkItemText = styled.div`
   flex: 1 1 240px;
   min-width: 0;
+  max-width: 100%;
 `
 
 export default function Home() {
+  const { hash } = useLocation()
+
+  useEffect(() => {
+    if (hash !== '#work') return
+    const el = document.getElementById('work')
+    if (!el) return
+    const id = requestAnimationFrame(() => {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    })
+    return () => cancelAnimationFrame(id)
+  }, [hash])
+
   return (
     <div>
       <HeroSection>
