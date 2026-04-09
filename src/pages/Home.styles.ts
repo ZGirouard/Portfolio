@@ -4,6 +4,7 @@ import {
   centeredMaxWidthCss,
   pageHorizontalGutterCss,
 } from '../styles/shared.styles'
+import { colors } from '../styles/colors.styles'
 
 const motionSafe = '@media (prefers-reduced-motion: no-preference)'
 
@@ -34,7 +35,8 @@ export const Divider = styled.img`
   width: 100%;
   ${centeredMaxWidthCss}
   height: auto;
-  margin-block: 1.5rem;
+  margin-top: none;
+  margin-bottom: 2rem;
 
   ${motionSafe} {
     animation: ${slideInFromRight} 1.25s ease-in-out both;
@@ -44,6 +46,7 @@ export const Divider = styled.img`
 export const HeroSection = styled.section`
   ${centeredMaxWidthCss}
   ${pageHorizontalGutterCss}
+  min-height: 80vh;
 
   ${motionSafe} {
     animation: ${slideInFromLeft} 1.25s ease-in-out both;
@@ -57,6 +60,21 @@ export const HeroImage = styled.img`
   margin: 0;
 `
 
+export const HeroTextContainer = styled.div`
+  margin-top: 9rem;
+  text-align: center;
+
+  ${motionSafe} {
+    animation: ${slideInFromRight} 1.25s ease-in-out both;
+    animation-delay: 1.5s;
+  }
+`
+
+export const WorkTitleContainer = styled.div`
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+`
+
 export const WorkList = styled.div`
   ${centeredMaxWidthCss}
   ${pageHorizontalGutterCss}
@@ -66,7 +84,7 @@ export const WorkItem = styled.div`
   display: flex;
   align-items: center;
   gap: 1.25rem 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 6rem;
   box-sizing: border-box;
 
   &:last-child {

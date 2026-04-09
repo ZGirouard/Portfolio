@@ -6,7 +6,6 @@ export const CONTENT_MAX_WIDTH_PX = 1134
 export const centeredMaxWidthCss = css`
   max-width: ${CONTENT_MAX_WIDTH_PX}px;
   margin-inline: auto;
-  box-sizing: border-box;
 `
 
 export const pageHorizontalGutterCss = css`

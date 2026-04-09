@@ -6,7 +6,6 @@ import {
 } from '../styles/shared.styles'
 
 export const FooterRoot = styled.footer`
-  box-sizing: border-box;
   background-color: ${colors.black};
   border-top: 4px solid ${colors.darkRed};
   flex-shrink: 0;
@@ -27,12 +26,9 @@ export const Inner = styled.div`
   }
 `
 
-const Column = styled.div`
-  min-width: 0;
+export const FooterColumn = styled.div`
   color: ${colors.white};
-`
-
-export const FooterColumn = styled(Column)`
+  min-width: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -78,7 +74,9 @@ export const SocialLink = styled.a`
   }
 `
 
-export const BrandColumn = styled(Column)`
+export const BrandColumn = styled.div`
+  color: ${colors.white};
+  min-width: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-end;

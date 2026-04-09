@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
-const MAX_PX = 593
+const MAX_PX = 500
 
 const frameCss = css`
   display: block;

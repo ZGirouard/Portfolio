@@ -38,7 +38,7 @@ export default function Footer() {
           </Heading>
           <Heading
             as={NavLink}
-            to={{ pathname: '/', hash: 'work' }}
+            to="/work"
             level={4}
             surface="dark"
             weight="light"
