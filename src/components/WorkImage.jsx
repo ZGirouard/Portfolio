@@ -1,40 +1,4 @@
-import styled from '@emotion/styled'
-import { css } from '@emotion/react'
-
-const MAX_PX = 593
-
-const frameCss = css`
-  display: block;
-  width: 100%;
-  max-width: ${MAX_PX}px;
-  box-sizing: border-box;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  background: none;
-`
-
-const StyledLink = styled.a`
-  ${frameCss}
-`
-
-const StyledButton = styled.button`
-  ${frameCss}
-`
-
-const StyledFrame = styled.div`
-  ${frameCss}
-  cursor: default;
-`
-
-const Img = styled.img`
-  display: block;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  height: auto;
-  vertical-align: top;
-`
+import { Img, StyledButton, StyledFrame, StyledLink } from './WorkImage.styles'
 
 export default function WorkImage({
   src,

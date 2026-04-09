@@ -1,13 +1,5 @@
-import styled from '@emotion/styled'
 import Heading from '../components/Heading'
-
-const Lead = styled.p`
-  font-size: 1.05rem;
-  line-height: 1.55;
-  max-width: 40rem;
-  margin: 0 0 1rem;
-  color: var(--text);
-`
+import { Lead } from './About.styles'
 
 export default function About() {
   return (
